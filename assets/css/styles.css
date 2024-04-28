@@ -1,0 +1,123 @@
+body {
+  background-color: lightblue;
+  background-image: url("https://i.imgur.com/AWPOMAt.jpeg");
+  background-image: url("../media/9328775.jpg");
+}
+
+header {
+  position: absolute;
+  background-color: #121212;
+  height: 5vh;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  position: absolute;
+  background-color: #121212;
+  height: 5vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer p {
+  margin-right: 20px;
+  float: right;
+  color: #fff;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    overflow:hidden;
+    transform: translate(-50%, -50%);
+}
+
+
+.mainBlack {
+    background-color: #000;
+    height: 20vh;
+    width: 100%;
+    padding-top:30px;
+  }
+
+.innerBlack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding:80px;
+    overflow:hidden;
+    background-color: #2C2C2C;
+    color:#fff;
+}
+
+.innerBlack p {
+    position: absolute;
+    font-family: "Baskervville", 'Times New Roman', Times, serif;
+    font-size: 100px; 
+    font-weight: 400; 
+}
+
+.mainWhite {
+  background-color: #fff;
+  height: 60vh;
+  width: 100%;
+}
+
+.newPost {
+    position:relative;
+    text-align: center;
+    top:10%;
+    font-family: "Karla", sans-serif, 'Times New Roman', Times;
+}
+
+.newPostDiv {
+    position:relative;
+    top: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 80%;
+    background-color: #B1B2A3;
+    text-align:center;
+    padding:5px;
+}
+
+.username {
+
+}
+
+.userPrompt {
+
+}
+
+.prompt {
+    position: relative;
+    left: 40%;
+    background-color: #FFF;
+    width:20%;
+    height: 40px;
+}
+
+.promptLong {
+    position: relative;
+    left: 20%;
+    background-color: #FFF;
+    width:60%;
+    height:120px;
+    overflow:scroll;
+}
+
+.submitButton {
+
+}
+
+.submitButton {
+
+}
+
