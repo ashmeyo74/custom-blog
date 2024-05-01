@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    width: 35vw;
+    transition-duration: 0.5s;
+}
+
+.blogContainer:hover {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 65vw;
+}
+
+
+.topInfo {
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+}
+
+.topInfo p {
+    font-family: "Karla", sans-serif;
+    margin-bottom: 0px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.postedBy {
+    font-size: 15px;
+}
+
+.postContent {
+    margin-left: 25px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+    height: 100%;
+    width: 90%;
+    text-align: justify;
+    overflow: scroll;
+}
+
+.postContent::-webkit-scrollbar {
+    display:none;
+}

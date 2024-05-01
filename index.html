@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" contents="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
     <title>The Daily Market</title>
 </head>
-<header>
-    <div class="headerDiv">test</div>
+<header> 
+        <button class="modeToggle" id="darkMode"> ☾ </button>
+        <button class="modeToggle" id="lightMode"> ☼ </button>
 </header>
 <body>
     <div class="container">
@@ -19,31 +21,30 @@
         <div class="mainWhite">
             <p class="newPost">MAKE A NEW POST</p>
             <div class="newPostDiv">
-                <p class="username">
-                    USERNAME
-                </p>
-                <div class="prompt" id="userPrompt"></div>
-                
-                <p>
-                    TITLE
-                </p>
-                <div class="prompt" id="titlePrompt"></div>
+                <form >
+                    <label for="userName" class="promptText">USERNAME</label><br>
+                    <input class="prompt" type="text" id="username" placeholder="Username"><br>
 
-                <p>
-                    POST CONTENT
-                </p>
-                <div class="promptLong" id="postPrompt"></div>
+                    <label for="titlePrompt" class="promptText">TITLE</label><br>
+                    <input class="prompt" type="text" id="titlePrompt" placeholder="Title"><br><br>
+
+                    <label for="postPrompt" class="promptText">POST CONTENT</label><br>
+                    <textarea class="promptLong" placeholder="Input post content here"></textarea><br><br>
+
+                    <input type="submit" value="SUBMIT" class="submitButton">
+
+                </form>
                 
-                <div class="submitButton" id="submitButton"> SUBMIT </div>
 
                 <div id="failureCondition"></div>
             </div>
         </div>
     </div>
 
-    <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/blog.js"></script> 
 </body>
 <footer>
+    <p class="footerlinks"> <a href="https://ashmeyo74.github.io/first-portfolio/">Portfolio</a> | ashmeyo74@gmail.com</p>
     <p class="freePik"> Background Image by <a href="https://www.freepik.com/free-vector/hand-drawn-floral-outline-background_51754845.htm#query=leaf%20pattern&position=1&from_view=keyword&track=ais&uuid=0a0efe6f-fd4e-4d78-a63f-3b28b7aa5ec5">Freepik</a></p>
 
 </footer>
