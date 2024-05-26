@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" contents="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
     <title>The Daily Market</title>
-</head>
-<header> 
-        <button class="modeToggle" id="darkMode"> ☾ </button>
-        <button class="modeToggle" id="lightMode"> ☼ </button>
-</header>
-<body>
+  </head>
+  <header>
+    <button class="modeToggle" id="darkMode">☾</button>
+    <button class="modeToggle" id="lightMode">☼</button>
+    <a href="./blog.html"><button class="viewBlog">POSTS</button></a>
+  </header>
+  <body class="wholeContainer lightMode">
     <div class="container">
-        <div class="mainBlack">
-            <div class="innerBlack">
-                <p>THE DAILY MARKET</p>
-            </div>
+      <div class="mainBlack">
+        <div class="innerBlack">
+          <p>THE DAILY MARKET</p>
         </div>
-        <div class="mainWhite">
-            <p class="newPost">MAKE A NEW POST</p>
-            <div class="newPostDiv">
-                <form >
-                    <label for="userName" class="promptText">USERNAME</label><br>
-                    <input class="prompt" type="text" id="username" placeholder="Username"><br>
+      </div>
+      <div class="main light">
+        <p class="newPost">MAKE A NEW POST</p>
+        <div class="newPostDiv divLight">
+          <form id="blogPost">
+            <label for="username" class="promptText">USERNAME</label><br />
+            <input
+              class="prompt"
+              type="text"
+              id="username"
+              placeholder="Username"
+            /><br />
 
-                    <label for="titlePrompt" class="promptText">TITLE</label><br>
-                    <input class="prompt" type="text" id="titlePrompt" placeholder="Title"><br><br>
+            <label for="titlePrompt" class="promptText">TITLE</label><br />
+            <input
+              class="prompt"
+              type="text"
+              id="titlePrompt"
+              placeholder="Title"
+            /><br /><br />
 
-                    <label for="postPrompt" class="promptText">POST CONTENT</label><br>
-                    <textarea class="promptLong" placeholder="Input post content here"></textarea><br><br>
+            <label for="postPrompt" class="promptText">POST CONTENT</label
+            ><br />
+            <textarea
+              class="promptLong"
+              id="postPrompt"
+              placeholder="Input post content here"
+            ></textarea><br /><br />
 
-                    <input type="submit" value="SUBMIT" class="submitButton">
+            <input type="submit" value="SUBMIT" class="submitButton" />
+          </form>
 
-                </form>
-                
-
-                <div id="failureCondition"></div>
-            </div>
+          <div id="failureCondition"></div>
         </div>
+      </div>
     </div>
 
-    <script src="./assets/js/blog.js"></script> 
-</body>
-<footer>
-    <p class="footerlinks"> <a href="https://ashmeyo74.github.io/first-portfolio/">Portfolio</a> | ashmeyo74@gmail.com</p>
-    <p class="freePik"> Background Image by <a href="https://www.freepik.com/free-vector/hand-drawn-floral-outline-background_51754845.htm#query=leaf%20pattern&position=1&from_view=keyword&track=ais&uuid=0a0efe6f-fd4e-4d78-a63f-3b28b7aa5ec5">Freepik</a></p>
-
-</footer>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+  </body>
+  <footer>
+    <p class="footerlinks">
+      <a href="https://ashmeyo74.github.io/first-portfolio/">Portfolio</a> |
+      ashmeyo74@gmail.com
+    </p>
+    <p class="freePik">
+      Background Image by
+      <a
+        href="https://www.freepik.com/free-vector/hand-drawn-floral-outline-background_51754845.htm#query=leaf%20pattern&position=1&from_view=keyword&track=ais&uuid=0a0efe6f-fd4e-4d78-a63f-3b28b7aa5ec5"
+        >Freepik</a
+      >
+    </p>
+  </footer>
 </html>

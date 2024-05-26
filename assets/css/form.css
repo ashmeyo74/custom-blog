@@ -14,10 +14,17 @@
     margin-right: 20px;
     width:80%;
     height:75%;
-    background-color: #D9D9D9;
     text-align:center;
     padding:5px;
     border-radius: 10px;
+}
+
+.divLight {
+  background-color: #D9D9D9;
+}
+
+.divDark {
+  background-color: #464646;
 }
 
 .promptText {

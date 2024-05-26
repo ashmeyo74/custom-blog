@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
-body {
-  background-color: #fff;
-  background-image: url("https://i.imgur.com/AWPOMAt.jpeg");
-  background-image: url("../media/9328775.jpg");
-}
 
 header {
   position: absolute;
@@ -28,6 +23,25 @@ header {
   display: none;
 }
 
+.lightMode {
+  background-color: #ffffff;
+  background-image: url("../media/9328775.jpg");
+}
+
+.darkMode {
+  background-color: #000;
+  background-image: url("../media/93287752.png");
+}
+
+.viewBlog {
+  height:100%;
+  width: 100px;
+  color:#FFF;
+  float:right;
+  background-color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
 
 .container {
     display:flex;
@@ -74,15 +88,25 @@ header {
     letter-spacing: 15px;
 }
 
-.mainWhite {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
   height: 60vh;
   width: 100%;
   min-height: 600px;
 }
+
+
+.light {
+  background-color: #fff;
+}
+
+.dark {
+  background-color: #000;
+  color:#FFF
+}
+
 
 footer {
   display:flex;
