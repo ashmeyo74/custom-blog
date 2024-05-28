@@ -8,17 +8,20 @@
     <title>The Daily Market</title>
   </head>
   <header>
+    <!-- Header content, sun is hidden until moon is clicked, vice versa. -->
     <button class="modeToggle" id="darkMode">☾</button>
     <button class="modeToggle" id="lightMode">☼</button>
     <a href="./blog.html"><button class="viewBlog">POSTS</button></a>
   </header>
   <body class="wholeContainer lightMode">
     <div class="container">
+      <!-- Black header begin here -->
       <div class="mainBlack">
         <div class="innerBlack">
           <p>THE DAILY MARKET</p>
         </div>
       </div>
+      <!-- Main posting container begins here  -->
       <div class="main light">
         <p class="newPost">MAKE A NEW POST</p>
         <div class="newPostDiv divLight">
@@ -47,10 +50,10 @@
               placeholder="Input post content here"
             ></textarea><br /><br />
 
-            <input type="submit" value="SUBMIT" class="submitButton" />
+            <input type="submit" value="SUBMIT" class="submitButton"> 
           </form>
-
-          <div id="failureCondition"></div>
+<!-- Failure condition appears when username, title or post content are not added properly.  -->
+          <div class="failCondition" id="failureCondition"></div>
         </div>
       </div>
     </div>

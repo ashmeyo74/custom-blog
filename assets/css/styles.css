@@ -107,6 +107,12 @@ header {
   color:#FFF
 }
 
+.failCondition {
+  color: red;
+  margin: 20px;
+  text-transform: uppercase;
+  font-size: large;
+}
 
 footer {
   display:flex;

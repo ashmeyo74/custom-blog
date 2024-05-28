@@ -1,25 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+.main {
+    display: flex;
+    padding:50px;
+    overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+    display:none;
+}
+
 .blogContainer {
     display: flex;
     flex-direction: column;
-    height: 25vh;
+    height: 35vh;
     min-height: 200px;
     width: 35vw;
+    padding: 20px;
     transition-duration: 0.5s;
+    overflow-wrap: break-word;
 }
 
 .blogContainer:hover {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    width: 65vw;
+    height: 60vh;
+    width: 80vw;
+    overflow-wrap: break-word;
+}
+
+.blogContainer::-webkit-scrollbar { 
+    display:none;
 }
 
 
 .topInfo {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid;
     margin-bottom: 10px;
+    position:sticky;
 }
 
 .topInfo p {
@@ -38,11 +54,16 @@
 .postContent {
     margin-left: 25px;
     padding: 10px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px;
     height: 100%;
     width: 90%;
     text-align: justify;
     overflow: scroll;
+}
+
+.light {
+    box-shadow: black;
+    border-bottom: black;
 }
 
 .postContent::-webkit-scrollbar {

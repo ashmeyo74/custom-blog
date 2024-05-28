@@ -9,7 +9,10 @@ if (localStorage.getItem('blogPost') != null) {
     formResult = [];
 }
 
+
+// Creates blog post dynamically by appending divs to their parent element in cascading order. 
 function createPost() {
+    // For each array found in the formResult storage, generate a new post.
     for(let post of formResult) { 
     let container = document.getElementById("mainLight");
 
