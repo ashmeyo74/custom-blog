@@ -1,10 +1,9 @@
-const blog = document.getElementById("blogPost");
-const user = document.getElementById("username");
-const title = document.getElementById("titlePrompt");
-const post = document.getElementById("postPrompt");
 
-// Declares formResult as an undefined element to assign from localStrage.
-let formResult;
+
+const blog = document.getElementById("blogPost");
+
+// Declares formResult as an empty  array  to assign from localStrage
+let formResult = [];
 
 // Checks if localStorage has a variable, if so, parses it. If not, assigns formResult to a blank array.
 if (localStorage.getItem('blogPost') != null) {
@@ -17,12 +16,14 @@ if (localStorage.getItem('blogPost') != null) {
 function formSubmit(event) {
     event.preventDefault();
     formResult.push({
-        Username: user.value,
-        Title: title.value,
-        Post_Content: post.value
+        Username: document.getElementById("username").value,
+        Title: document.getElementById("titlePrompt").value,
+        Post_Content: document.getElementById("postPrompt").value
     });
     localStorage.setItem('blogPost', JSON.stringify(formResult));
     console.log(formResult); 
 };
 
-blog.addEventListener("submit", formSubmit);
+// Listens for the submit button to be clicked, then runs the formSubmit function.
+blog.addEventListener("submit", formSubmit); 
+

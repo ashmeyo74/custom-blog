@@ -1,48 +1,43 @@
-// Selects element from webpage
-const mainDiv = document.querySelector(".main")
-const dark = document.querySelector("#darkMode");
-const light = document.querySelector("#lightMode");
-const bgLight = document.querySelector(".wholeContainer")
-const bgDark = document.querySelector(".wholeContainer")
 
-// Declares the current mode, set on light or retrieved from localStorage
-let mode = localStorage.getItem('mode') || 'light';
+// Declares formResult as an empty  array  to assign from localStrage
+let formResult = [];
 
+// Checks if localStorage has a variable, if so, parses it. If not, assigns formResult to a blank array.
+if (localStorage.getItem('blogPost') != null) {
+    formResult = JSON.parse(localStorage.getItem('blogPost'));
+} else {
+    formResult = [];
+}
 
-// sets the page elements to dark mode
-function setDark () {
-    mode = 'dark';
-    dark.style.display = "none";
-    light.style.display = "block";
-    mainDiv.setAttribute('class', 'main dark');
-    bgLight.setAttribute('class', 'wholeContainer darkMode')
+function createPost() {
+    for(let post of formResult) { 
+    let container = document.getElementById("mainLight");
 
-    localStorage.setItem('mode', 'dark');
+    let blogContainer = document.createElement("div");
+    blogContainer.classList.add("blogContainer");
+
+    let topInfo = document.createElement("div");
+    topInfo.classList.add("topInfo");
+
+    let title = document.createElement("p");
+    title.classList.add("title");
+    title.textContent = post.Title;
+
+    let username = document.createElement("p");
+    username.classList.add("postedBy");
+    username.textContent = `POSTED BY: ${post.Username}`;
+
+    let postContent = document.createElement("div");
+    postContent.classList.add("postContent");
+    postContent.textContent = post.Post_Content;
+
+    topInfo.appendChild(title);
+    topInfo.appendChild(username);
+    blogContainer.appendChild(topInfo);
+    blogContainer.appendChild(postContent);
+    container.appendChild(blogContainer);
+
+    }
 };
 
-// Sets the page elements to light mode
-function setLight () {
-    mode = 'light';
-    dark.style.display = "block";
-    light.style.display = "none";
-    mainDiv.setAttribute('class', 'main light');
-    bgDark.setAttribute('class', 'wholeContainer lightMode')
-
-    localStorage.setItem('mode', 'light');
-}
-
-// Set initial mode based on localStorage
-if (mode === 'dark') {
-    setDark();
-} else {
-    setLight();
-}
-
-// Add event listeners to buttons
-dark.addEventListener('click', function() {
-    setDark();
-});
-
-light.addEventListener('click', function() {
-    setLight();
-});
+createPost();
