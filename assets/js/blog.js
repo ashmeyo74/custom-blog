@@ -1,4 +1,3 @@
-
 // Declares formResult as an empty  array  to assign from localStrage
 let formResult = [];
 
@@ -12,9 +11,11 @@ if (localStorage.getItem('blogPost') != null) {
 
 // Creates blog post dynamically by appending divs to their parent element in cascading order. 
 function createPost() {
+    let tip = document.getElementById("tip");
+    let container = document.getElementById("mainLight");
+
     // For each array found in the formResult storage, generate a new post.
     for(let post of formResult) { 
-    let container = document.getElementById("mainLight");
 
     let blogContainer = document.createElement("div");
     blogContainer.classList.add("blogContainer");
@@ -39,8 +40,15 @@ function createPost() {
     blogContainer.appendChild(topInfo);
     blogContainer.appendChild(postContent);
     container.appendChild(blogContainer);
-
     }
+    
+    // Hides 'tip' element if there are fewer than 2 posts on the page.
+    if (formResult.length >= 2) {
+        tip.style.display="inline";
+    } else {
+        tip.style.display="none";
+    }
+
 };
 
 createPost();
